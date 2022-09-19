@@ -1,0 +1,55 @@
+
+
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Jaloliddin Mamatmusayev's Personal blog site">
+    <meta name="author" content="Devcrud">
+    <title>
+        {% block title %}
+            title content
+        {% endblock title %}
+    </title>
+ 
+   	<link rel="stylesheet" href="{% static 'css/main.css' %}">
+   	<link rel="stylesheet" href="{% static 'css/footer.css' %}">
+	<link rel="stylesheet" href="{% static 'css/news_css.css' %}">
+
+
+</head>
+
+  
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <div id ="scrollPath">    </div>
+
+   
+    <main class="container">
+        {% block content %}
+        main body
+        {% endblock content %}
+    </main>
+
+    <footer class="footer-distributed">
+        {% block footercontent %}
+        footer
+        {% endblock footercontent %}
+    </footer>
+
+
+
+    <script src="{% static 'vendors/jquery/jquery-3.4.1.js' %}"></script>
+
+    <script src="{% static 'vendors/bootstrap/bootstrap.affix.js' %}"></script>
+
+    <script src="{% static 'vendors/isotope/isotope.pkgd.js' %}"></script>
+    
+ 
+    <script src="{% static 'js/johndoe.js' %}"></script>
+    
+</body>
+</html>

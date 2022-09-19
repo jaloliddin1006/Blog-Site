@@ -1,0 +1,121 @@
+/* @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap'); */
+
+
+.container_new  {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    position: relative;
+ padding: 50px;
+
+    max-width: 100vh;
+    transform: skewY(-20deg);
+}
+
+.container_new .imgBx{
+    position: relative;
+    width: 80vh;
+    height: 25vh;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+}
+
+.container_new .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* filter: grayscale(1); */
+    max-width: 100%;
+    transition: 0.5s;
+}
+
+.container_new .imgBx:hover img:nth-child(3){
+    transform: translate(80px, -80px);
+}
+
+.container_new .imgBx:hover img:nth-child(2){
+    transform: translate(40px, -40px);
+    opacity: 0.5;
+}
+
+.container_new .imgBx:hover img:nth-child(1){
+    transform: translate(0px, 0px);
+    opacity: 0.1;
+}
+
+.container_new h2 {
+    position: relative;
+    color: #fff;
+    font-size: 3.8em;
+}
+
+.container_new .skew{
+    transform-origin: top;
+    transform: skewX(45deg);
+}
+.container_new .skew p{
+    color: #fff;
+    font-size:  1.2em;
+
+}
+
+
+.container_new .skew .read-more{
+    position: relative;
+    padding: 10px 30px;
+    background: transparent;
+    display: inline-block;
+    color: #fff;
+    transform-origin: top;
+    margin-top: 20px;
+    border: 2px solid #fff;
+    /* transform: skewX(-45deg); */
+    text-decoration: none;
+    letter-spacing:2px;
+    font-size:20px;
+  text-align: right;
+  transition: 0.1s;
+}
+
+.container_new .skew .read-more:hover{
+    background: #fff;
+    color: #000;
+}
+
+
+.container_new .skew .post-details {
+    margin: 15px 0 15px !important;
+    position: relative;
+  transform: skewX(-45deg);
+  display: inline-block;
+    
+ 
+  }
+  
+.container_new .skew .post-details2 {
+    margin: 15px 0 15px !important;
+    
+  transform: skewX(-45deg);
+    
+ 
+  }
+  .container_new .skew .post-details i {
+    display: inline-block;
+  /* text-align: right;  */
+  width: 15px;
+  }
+  
+  .container_new .skew .post-details a {
+
+    margin-right: 10px;
+    color: #ff0;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    opacity: .7;
+    font-size: 18x;
+  }
+  

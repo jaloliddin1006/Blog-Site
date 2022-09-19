@@ -1,0 +1,627 @@
+
+
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Jaloliddin Mamatmusayev's Personal blog site">
+    <meta name="author" content="Devcrud">
+    <title>
+       Jaloliddin Mamatmusayev | Python Developer
+    </title>
+ 
+   	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+   	<link rel="stylesheet" href="{% static 'css/footer.css' %}">
+	<link rel="stylesheet" href="{% static 'css/news_css.css' %}">
+
+
+</head>
+
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <div id ="scrollPath">    </div>
+
+    {% block content %}
+
+    <header class="header">
+        <div class="container">
+            <ul class="social-icons pt-3">
+            {% for contact in cantact %}
+        
+                <li class="social-item"><a class="social-link text-light" href="{{ contact.telegram_url }} " target="_blank" title="Telegram orqali bog'lanish">
+                    <img src="{% static 'imgs/telegram-logo-rgb.png' %}" alt="" style="width: 20px;">
+                </a></li>
+
+                  
+                <li class="social-item"><a class="social-link text-light" href="{{ contact.facebook_url }} " target="_blank" title="Facebook orqali bog'lanish">
+                    <img src="{% static 'imgs/facebook-logo-rgb.png' %}" alt="" style="width: 20px;" aria-hidden="true">
+                </a></li>
+
+                <li class="social-item"><a class="social-link text-light" href="{{ contact.linkedin_url }} " target="_blank" title="Linkedin orqali bog'lanish">
+                    <img src="{% static 'imgs/linkedin-logo-rgb.png' %}" alt="" style="width: 20px;" aria-hidden="true">
+                </a></li>
+                
+                <li class="social-item"><a class="social-link text-light" href="{{ contact.instagram_url }} " target="_blank" title="Instagram orqali bog'lanish">
+                    <img src="{% static 'imgs/insta-logo-rgb.png' %}" alt="" style="width: 20px;" aria-hidden="true">
+                </a></li>
+                
+                <li class="social-item"><a class="social-link text-light" href="{{ contact.github_url }} " target="_blank" title=" GitHub sahifam">
+                    <img src="{% static 'imgs/git-hub-logo.png' %}" alt="" style="width: 20px;" aria-hidden="true">
+                </a></li>
+                {% endfor %}
+ </ul> 
+
+        {% for home in home_pagee %}
+         
+            <div class="header-content">
+                <h4 class="header-subtitle" >Hello, I am</h4>
+                <h1 class="header-title">{{ home.my_name }}</h1>
+                <h6 class="header-mono" >{{ home.my_subject }}</h6>
+                
+            </div>
+        </div>
+    </header>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="510">
+        <div class="container">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse mt-sm-20 navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#resume" class="nav-link">Resume</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav brand">
+                    <img src="{{ home.logo.url }}" alt="" class="brand-img">
+                    <li class="brand-txt">
+                        <h5 class="brand-title" style="color: #073941;">{{ home.my_name }}</h5>
+                        <div class="brand-subtitle">{{ home.my_subject }}</div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#portfolio" class="nav-link">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#blog" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item last-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div id="about" class="row about-section">
+            <div class="col-lg-4 about-card box">
+                <div class="boxx"> </div>
+                <p>
+                    <h3 class="font-weight-light">Who am I ?</h3>
+                </p>
+                <p>
+                    <span class="line mb-4"></span>
+                    <h5 class="mb-3" style="font-size: 1.1em;">
+                        {{ home.about_us }}
+                    </h5> 
+                </p>
+                <p class="mt-20">
+                    Brief information about myself
+                </p>
+                
+            </div>
+        {% endfor %}
+
+
+            {% for contact in cantact %}
+
+            <div class="col-lg-4 about-card box" style="align-items: center;">
+                <h3 class="font-weight-light">Personal Info</h3>
+                <span class="line mb-5"></span>
+                <ul class="mt40 info list-unstyled">
+                    <li><span>Birth date</span> : 10/06/2003</li>
+                    <li><span>Email</span> : {{ contact.email }}</li>
+                    <li><span>Phone</span> : {{ contact.phone }}</li>
+                    <li><span>Telegram</span> : {{ contact.telegram_username }} </li>
+                    <li><span>Address</span> :  {{ contact.address }}</li>
+                </ul>
+                <ul class="social-icons pt-5 ml-5 " >
+                    
+                <li class="social-item"><a class="social-link text-light" href="{{ contact.telegram_url }} " target="_blank" title="Telegram orqali bog'lanish">
+                    <img src="{% static 'imgs/telegram-logo.png' %}" alt="" style="width: 20px;">
+                </a></li>
+
+                  
+                <li class="social-item"><a class="social-link text-light" href="{{ contact.facebook_url }} " target="_blank" title="Facebook orqali bog'lanish">
+                    <img src="{% static 'imgs/facebook-logo.png' %}" alt="" style="width: 20px;" aria-hidden="true">
+                </a></li>
+
+                <li class="social-item"><a class="social-link text-light" href="{{ contact.linkedin_url }} " target="_blank" title="Linkedin orqali bog'lanish">
+                    <img src="{% static 'imgs/linkedin-logo.png' %}" alt="" style="width: 20px;" aria-hidden="true">
+                </a></li>
+                
+                <li class="social-item"><a class="social-link text-light" href="{{ contact.instagram_url }} " target="_blank" title="Instagram orqali bog'lanish">
+                    <img src="{% static 'imgs/insta-logo.png' %}" alt="" style="width: 20px;" aria-hidden="true">
+                </a></li>
+                
+                <li class="social-item"><a class="social-link text-light" href="{{ contact.github_url }} " target="_blank" title=" GitHub sahifam">
+                    <img src="{% static 'imgs/github-logo.png' %}" alt="" style="width: 20px;" aria-hidden="true">
+                </a></li>
+                {% endfor %}
+ </ul>  
+            </div>
+            <div class="col-lg-4 about-card box">
+                <h3 class="font-weight-light">My Expertise</h3>
+                <span class="line mb-5"></span>
+                <div class="row">
+                    <div class="col-1 text-danger pt-1"><i >
+                       <img src="{% static 'imgs/python-logo.png' %}" alt="Python Language" style="width: 30px;" >
+
+                    </i></div>
+                    <div class="col-10 ml-auto mr-3">
+                        <h6>Python Programming Language</h6>
+                        <p class="subtitle"> Problem Solving, Teaching, Coding</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1 text-danger pt-1"><i >
+                       <img src="{% static 'imgs/telegram-bot-logo.png' %}" alt="Telegram Bot" style="width: 35px;" >
+                    </i></div>
+                    <div class="col-10 ml-auto mr-3">
+                        <h6>Telegram Bot</h6>
+                        <p class="subtitle"> Online Shop, Private Bot, Opitional Bot </p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1 text-danger pt-1"><i >
+                       <img src="{% static 'imgs/web-site-logo.png' %}" alt="Telegram Bot" style="width: 30px;" >
+
+                    </i></div>
+                    <div class="col-10 ml-auto mr-3">
+                        <h6>Web Development</h6>
+                        <p class="subtitle">Backend Coding with Django, Rest API</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Resume Section-->
+    <section class="section" id="resume">
+        <div class="container">
+            <h2 class="mb-5"><span class="text-danger">My</span> Resume</h2>
+            <div class="row">
+             
+                <div class="col-md-6 col-lg-6">
+                    <div class="card">
+                       <div class="card-header">
+                            <div class="mt-2 " >
+                                <h4 style="color: #e13f75; font-size: 1.8em;">Education</h4>
+                                <span class="line"></span>  
+                            </div>
+                        </div>
+                        <div class="card-body">
+
+                        {% for edu in resume_education %}
+
+                        <h6 class="title text-danger">{{ edu.edu_date }}</h6>
+                            <P>{{ edu.education }}</P>
+                            <P class="subtitle">{{ edu.edu_body }}
+                            </P>
+                            <hr>
+                           
+                           
+                        {% endfor %}
+                            
+                        </div>
+                    </div>
+                    {% for i in cantact %}
+
+                    <a href="{{ i.my_resume.url }}" class="btn btn-primary" style="color: #fff;" title="Download My Resume" target="_blank">Resume Download</a>
+                    {% endfor %}
+                </div>
+              
+                
+                <div class="col-lg-6">
+                    <div class="card">
+                       <div class="card-header">
+                            <div class="pull-left">
+                                <h4 class="mt-2 " style="color: #e13f75; font-size: 1.8em;">Skills</h4>
+                                <span class="line"></span>  
+                            </div>
+                        </div>
+                        <div class="card-body pb-2">
+                        {% for skill in skills %}
+                           
+                            <p class="mb-3">
+
+                           <span class="text-muted"> {{ skill.skill_group }} -></span> {{ skill.skills }}
+                        </p>
+                    {% endfor %}
+                   
+
+                        </div>
+                    </div>
+                    <div class="card">
+                       <div class="card-header">
+                            <div class="pull-left">
+                                <h4 class="mt-2" style="color: #e13f75; font-size: 1.8em;">Certificates</h4>
+                                <span class="line"></span>  
+                            </div>
+                        </div>
+                        <div class="card-body pb-2 pt-0 mt-0">
+                        {% for cer in resume_certificate %}
+
+                            <dl>
+                                <dt>
+                                    <a href="{{ cer.certificate.url }} ">
+                                        <h6 class=" text-danger mt-1 pt-1"> {{ cer.cartificate_name }} 
+                                    </a>     -     <span class="text-muted" style="font-size: 0.8em">{{ cer.certificate_date }} </span></h6>
+                                </dt>
+                                <dd class="text-muted" style="margin-left: 35px;">
+                                    {{ cer.certificate_body }} 
+                                </dd>
+                                
+                            </dl>
+
+                            {% endfor %}
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <!-- Portfolio Section -->
+    <section class="section bg-custom-gray" id="portfolio">
+        <div class="container">
+            <h1 class="mb-5"><span class="text-danger">My</span> Portfolio</h1>
+            <div class="portfolio">
+                <div class="filters">
+                    <a href="#" data-filter=".new" class="active">
+                        All
+                    </a>
+                    <a href="#" data-filter=".web">
+                        Web 
+                    </a>
+                    <a href="#" data-filter=".telegram">
+                        Telegram 
+                    </a>
+                    <a href="#" data-filter=".desktop">
+                        Desktop
+                    </a>
+                </div>
+                <div class="portfolio-container"> 
+
+                    {% for project in portfolio %}
+
+                    {% if project.project_type == 'desktop' %}
+                    <div class="col-md-6 col-lg-4 desktop new">
+                        <div class="portfolio-item">
+                            <img src="{{ project.project_img.url }}" class="img-fluid" alt="my deleted photo">
+                            <div class="content-holder">
+                                
+                                <div class="text-holder">
+                                    <a class="img-popup" href="{{ project.project_link }}" title="Dastur kodini olish uchun bosing">
+                                        <h6 class="title">{{ project.project_name }}</h6>
+                                </a>
+                                    <p class="subtitle">
+                                        {{ project.project_body }}
+                                       </p>
+                                </div>
+                            </div>   
+                        </div>             
+                    </div>
+                    {% elif  project.project_type == 'telegam' %}
+                    <div class="col-md-6 col-lg-4 telegram new">
+                        <div class="portfolio-item">
+                            <img src="{{ project.project_img.url }}" class="img-fluid" alt="my deleted photo">
+                            <div class="content-holder">
+                                
+                                <div class="text-holder">
+                                    <a class="img-popup" href="{{ project.project_link }}" title="Botni ishlatib ko'rish uchun bosing">
+                                        <h6 class="title">{{ project.project_name }}</h6>
+                                </a>
+                                    <p class="subtitle">
+                                        {{ project.project_body }}
+                                       </p>
+                                </div>
+                            </div>   
+                        </div>    
+                    </div> 
+                    {% elif  project.project_type == 'web' %}
+
+                    <div class="col-md-6 col-lg-4 web new">
+                        <div class="portfolio-item">
+                            <img src="{{ project.project_img.url }}" class="img-fluid" alt="my deleted photo">
+                            <div class="content-holder">
+                                
+                                <div class="text-holder">
+                                    <a class="img-popup" href="{{ project.project_link }} " title="Saytni ishlatib ko'rish uchun bosing">
+                                        <h6 class="title">{{ project.project_name }}</h6>
+                                </a>
+                                    <p class="subtitle">
+                                        {{ project.project_body }}
+                                       </p>
+                                </div>
+                            </div>   
+                        </div>                        
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+
+                    
+                </div> 
+            </div>  
+        </div>            
+    </section>
+    <!-- End of portfolio section -->
+
+
+<!-- 
+
+    <script src="//taplink.cc/id:8024319/widget/" async></script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="section" id="blog">
+        <div class="container">
+            <h2 class="mb-5">Latest <span class="text-danger">News</span></h2>
+            <div class="row">
+
+<!-- ----------------------------------------------------------------------------------------- -->
+            {% for news in articles %}
+
+
+                <div class="container_new">
+                    <div class="imgBx">
+                        <img src="{{ news.article_img_1.url }}" alt="rasm" >
+                        <img src="{{ news.article_img_1.url }}" alt="rasm" >
+                        <img src="{{ news.article_img_1.url }}" alt="rasm" >
+
+                    </div>
+                    <h2 style="font-size: 3.4em;">{{ news.article_title }}</h2>
+                    <div class="skew">
+                        <p><i>
+                            {{ news.article_subtitle }}....
+
+                        </i>
+                        </p >
+                        <p class="post-details">
+                            <a href="/news/{{ news.pk }}" class="read-more" title="To'liq xabarni ochish">Read More >></a>
+                            <auht style="color: #97b1b6;"> By: Jaloliddin | {{ news.date|date:'Y-m-d' }}</auht>
+
+                        </p>
+                    
+                    </div>
+                </div>
+
+                {% endfor %}
+<!-- ----------------------------------------------------------------------------------------- -->
+
+<!-- ----------------------------------------------------------------------------------------- -->
+
+            </div>
+        </div>
+    </section>
+
+    <div class="section contact" id="contact" style="background: #182330c8;">
+        <div id="map" class="map"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="contact-form-card">
+                        <h4 class="contact-title">Send a message</h4>
+                        <form action="">
+                            <div class="form-group">
+                                <input  class="form-control" name="name" id="name" type="text" placeholder="Your name..." required="">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" name="email" id="email" type="email" placeholder="Your email..." required="">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" id="message"  placeholder="Your message..." rows="7" required=""></textarea>
+                            </div>
+                            <div class="form-group ">
+                                <button type="submit" class="form-control btn btn-primary" >Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            {% for contact in cantact %}
+
+                <div class="col-lg-4">
+                    <div class="contact-info-card">
+                        <h4 class="contact-title">Get in touch</h4>
+                        <div class="row mb-2">
+                            <div class="col-1 pt-1 mr-1">
+                                <img src="{% static 'imgs/phone-logo.png' %}" alt="" style="width: 25px;">
+                            </div>
+                            <div class="col-10 ">
+                                <h6 class="d-inline">Phone : <br> <span class="text-muted">{{ contact.phone }}</span></h6>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-1 pt-1 mr-1">
+                                <img src="{% static 'imgs/location-logo-2.png' %}" alt="" style="width: 20px;">
+
+                            </div>
+                            <div class="col-10">
+                                <h6 class="d-inline">Address :<br> <span class="text-muted">{{ contact.address }}</span></h6>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-1 pt-1 mr-1">
+                                <img src="{% static 'imgs/email-logo.png' %}" alt="" style="width: 30px;">
+
+                            </div>
+                            <div class="col-10">
+                                <h6 class="d-inline">Email :<br> <span class="text-muted">{{ contact.email }}</span></h6>
+                            </div>
+                        </div>
+                        <ul class="social-icons pt-4 ml-4">
+                           
+                            <li class="social-item"><a class="social-link text-light" href="{{ contact.telegram_url }} " target="_blank" title="Telegram orqali bog'lanish">
+                                <img src="{% static 'imgs/telegram-logo.png' %}" alt="" style="width: 20px;">
+                            </a></li>
+
+                            
+                            <li class="social-item"><a class="social-link text-light" href="{{ contact.facebook_url }} " target="_blank" title="Facebook orqali bog'lanish">
+                                <img src="{% static 'imgs/facebook-logo.png' %}" alt="" style="width: 20px;" aria-hidden="true">
+                            </a></li>
+
+                            <li class="social-item"><a class="social-link text-light" href="{{ contact.linkedin_url }} " target="_blank" title="Linkedin orqali bog'lanish">
+                                <img src="{% static 'imgs/linkedin-logo.png' %}" alt="" style="width: 20px;" aria-hidden="true">
+                            </a></li>
+                            
+                            <li class="social-item"><a class="social-link text-light" href="{{ contact.instagram_url }} " target="_blank" title="Instagram orqali bog'lanish">
+                                <img src="{% static 'imgs/insta-logo.png' %}" alt="" style="width: 20px;" aria-hidden="true">
+                            </a></li>
+                            
+                            <li class="social-item"><a class="social-link text-light" href="{{ contact.github_url }} " target="_blank" title=" GitHub sahifam">
+                                <img src="{% static 'imgs/github-logo.png' %}" alt="" style="width: 20px;" aria-hidden="true">
+                            </a></li>
+
+                                                </ul> 
+                    </div>
+                </div>
+            {% endfor %}
+
+            </div>
+
+        </div>
+    </div>
+
+  
+    {% endblock content %}
+    {% for con in cantact %}
+
+
+
+    <footer class="footer-distributed">
+
+    
+          <div class="footer-left">
+    
+            <h3>{{ con.name| slice:":7" }}<span>{{ con.name| slice:"7:" }}</span></h3>
+    
+            <p class="footer-links" style="color: #66696e;">
+              <a href="{% url 'home'  %}" class="link-1">Home</a>
+              
+              <a href="{% url 'home'  %}">About</a>
+            
+              <a href="{% url 'home'  %}">Resume</a>
+            
+              <a href="{% url 'home'  %}">Portfolio</a>
+              
+              <a href="{% url 'home'  %}">Blog</a>
+              
+              <a href="{% url 'home'  %}">Contact</a>
+            </p>
+    <br>
+            <p class="footer-company-name">{{ con.name }} © 2022</p>
+          </div>
+    
+          <div class="footer-center" >
+    
+            <div>
+                <img src="{% static 'imgs/location-logo-2.png' %}" alt="" style="width: 20px; margin: 5px;">
+
+              <p style="color: #8d9094;"><span>{{ con.address }}</p>
+            </div><br>
+    
+            <div>
+                <img src="{% static 'imgs/phone-logo.png' %}" alt="" style="width: 25px; margin: 5px;">
+
+              <p style="color: #8d9094;">{{ con.phone }}</p>
+            </div>
+    
+            <div><br>
+                <img src="{% static 'imgs/email-logo.png' %}" alt="" style="width: 30px; margin-right: 5px;"> 
+
+              <p style="color: #8d9094;">{{ con.email }}</p>
+            </div>
+    
+          </div>
+    
+          <div class="footer-right">
+    
+            <p class="footer-company-about">
+              <span>{{ con.motivation_title }}</span>
+              {{ con.motivation_body }}
+            </p>
+            <p class="pl-5 ml-5">        {{ con.motivation_author }}</p>
+    
+            <div class="pl-4">
+                <ul class="social-icons pt-3">
+                   
+                <li class="social-item"><a class="social-link text-light" href="{{ con.telegram_url }}" target="_blank" title="Telegram orqali bog'lanish">
+                    <img src="{% static 'imgs/telegram-logo-rgb.png' %}" alt="" style="width: 20px;">
+                </a></li>
+
+                  
+                <li class="social-item"><a class="social-link text-light" href="{{ con.facebook_url }} " target="_blank" title="Facebook orqali bog'lanish">
+                    <img src="{% static 'imgs/facebook-logo-rgb.png' %}" alt="" style="width: 20px;" aria-hidden="true">
+                </a></li>
+
+                <li class="social-item"><a class="social-link text-light" href="{{ con.linkedin_url }} " target="_blank" title="Linkedin orqali bog'lanish">
+                    <img src="{% static 'imgs/linkedin-logo-rgb.png' %}" alt="" style="width: 20px;" aria-hidden="true">
+                </a></li>
+                
+                <li class="social-item"><a class="social-link text-light" href="{{ con.instagram_url }} " target="_blank" title="Instagram orqali bog'lanish">
+                    <img src="{% static 'imgs/insta-logo-rgb.png' %}" alt="" style="width: 20px;" aria-hidden="true">
+                </a></li>
+                
+                <li class="social-item"><a class="social-link text-light" href="{{ con.github_url }} " target="_blank" title=" GitHub sahifam">
+                    <img src="{% static 'imgs/git-hub-logo.png' %}" alt="" style="width: 20px;" aria-hidden="true">
+                </a></li>
+                  
+    
+                </ul>  
+            </div>
+    
+          </div>
+    
+        </footer>
+        {% endfor %}
+
+
+        <script src="{% static 'vendors/jquery/jquery-3.4.1.js' %}"></script>
+
+        <script src="{% static 'vendors/bootstrap/bootstrap.affix.js' %}"></script>
+    
+        <script src="{% static 'vendors/isotope/isotope.pkgd.js' %}"></script>
+        
+     
+        <script src="{% static 'js/johndoe.js' %}"></script>
+        
+    </body>
+    </html>

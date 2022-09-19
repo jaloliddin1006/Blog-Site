@@ -1,0 +1,115 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+<div class="pos-f-t">
+   
+    <nav class="navbar navbar-dark bg-dark pl-5">
+        
+        {% for i in cantact %}
+        <a href="{% url 'home' %}" class="text-light">
+        <h3 class="">{{ i.name| slice:":7" }}<span style="color:aqua;">{{ i.name| slice:"7:" }}</span></h3>
+    </a>
+{% endfor %}
+<h4>
+    Yangiliklar bo'limi
+
+</h4>
+
+
+
+
+    <ul class="social-icons pr-3 " style="margin-right: 10vh;">
+       
+    <li class="social-item"><a class="social-link text-light p-3" href="{{ con.telegram_url }}" target="_blank" title="Telegram orqali bog'lanish">
+        <img src="{% static 'imgs/telegram-logo-rgb.png' %}" alt="" style="width: 20px;">
+    </a></li>
+
+      
+    <li class="social-item"><a class="social-link text-light p-3" href="{{ con.facebook_url }} " target="_blank" title="Facebook orqali bog'lanish">
+        <img src="{% static 'imgs/facebook-logo-rgb.png' %}" alt="" style="width: 20px;" aria-hidden="true">
+    </a></li>
+
+    <li class="social-item"><a class="social-link text-light p-3" href="{{ con.linkedin_url }} " target="_blank" title="Linkedin orqali bog'lanish">
+        <img src="{% static 'imgs/linkedin-logo-rgb.png' %}" alt="" style="width: 20px;" aria-hidden="true">
+    </a></li>
+    
+    <li class="social-item"><a class="social-link text-light p-3" href="{{ con.instagram_url }} " target="_blank" title="Instagram orqali bog'lanish">
+        <img src="{% static 'imgs/insta-logo-rgb.png' %}" alt="" style="width: 20px;" aria-hidden="true">
+    </a></li>
+    
+    <li class="social-item"><a class="social-link text-light p-3" href="{{ con.github_url }} " target="_blank" title=" GitHub sahifam">
+        <img src="{% static 'imgs/git-hub-logo.png' %}" alt="" style="width: 20px;" aria-hidden="true">
+    </a></li>
+      
+
+    </ul>  
+
+    </nav>
+  </div>
+
+<div class="container">
+    
+    <div class="article mt-5 mb-4" >
+        <div class="card" style="background: #222734;">
+            <div class="imgbox p-3 ">
+            <img src="{{ articles.article_img_2.url }}" alt="" style="width: 100%;">
+            </div>
+            <div class="newsbody p-3">
+                <p class="title" >
+<h1> {{ articles.article_title }}</h1>
+                    <span style="font-size: 1em;">|   {{ articles.date }}</span>
+                </p>
+                <p class="body" style="color: floralwhite;">
+
+                    {{ articles.article_body }}
+                </p>
+            </div>
+        </div>
+
+
+</div>
+
+
+<div class="articlesss p-5 container">
+    <h1 class="container" style="text-align: center;">
+        Boshqa yangiliklar
+    </h1>
+   
+</div>
+<!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum atque numquam in itaque, magnam ut voluptatem sit quo aperiam soluta laboriosam cumque quae error, doloremque obcaecati ad nobis fuga impedit? Magni quaerat odit eligendi ex sit delectus nemo tenetur? Provident veniam maiores, odit inventore ab beatae rerum assumenda impedit amet quam aliquid doloribus vel, laudantium doloremque iusto sapiente ipsa hic at corporis ad dolorem. Molestiae voluptatem temporibus provident enim, atque deleniti corporis eaque sapiente rem dolores aperiam velit eos facere perspiciatis? Perferendis, labore neque. Quasi laboriosam officiis dolore molestias qui, necessitatibus rerum in sint consequuntur dolorum nostrum placeat quibusdam aliquid adipisci. Doloribus, veniam! Culpa quis perferendis quidem sint nemo ratione. Consequatur magni consectetur quasi atque voluptas quibusdam non explicabo minima facere eius odio, quod incidunt labore earum nihil ex vel? Voluptas repellendus quisquam quis odio, excepturi debitis. Fugiat voluptatibus nisi neque molestias expedita, adipisci ipsam? Illum, exercitationem quam. Quos provident beatae quasi numquam, voluptate ex laudantium dolorum minima nulla sunt rem ab vero sequi hic quae dolores modi! Sint autem ipsa illo aliquam numquam deleniti vero quos! Tempora non nesciunt, vel architecto itaque dolores odit inventore laudantium explicabo similique alias ipsum. Fugit officiis qui iste dignissimos error ratione alias ea! Quibusdam tempore reiciendis laudantium qui autem sequi illum minus, asperiores beatae nostrum cupiditate vel sed, aliquid natus temporibus quia modi, architecto eaque ipsum quas? Blanditiis delectus natus voluptatum cum ipsam consequuntur quisquam, molestiae error ducimus officia nemo saepe vitae omnis officiis nostrum. Maxime iste nisi enim, nostrum quo qui dicta quam eos rerum illo expedita dolorum necessitatibus recusandae voluptates. Amet quaerat laborum obcaecati cupiditate, rem nulla vitae eligendi, quibusdam odit ex rerum corporis praesentium optio repudiandae aperiam velit est illo, magnam dolore aliquam similique. Rerum ea qui debitis temporibus id, exercitationem esse nihil dolores delectus, iste nesciunt accusantium laboriosam? Quam fuga ratione molestiae molestias odit voluptatum consequuntur consectetur, impedit fugiat, ea placeat temporibus quod, excepturi ut beatae est dolores incidunt? Quod maxime blanditiis vel incidunt, modi ad molestiae odit tempora debitis accusamus commodi labore voluptatibus mollitia provident corrupti harum eius rem in atque totam voluptatem unde consequatur accusantium perspiciatis! Exercitationem, ab quia quidem deserunt natus expedita consequatur aperiam veniam! Repellat et debitis reprehenderit expedita doloremque aperiam tenetur laudantium nostrum, veritatis veniam. Molestias odio dolores, porro voluptate vitae odit tenetur, accusamus, ipsa magni officiis tempora a optio animi et laboriosam aperiam impedit sint libero beatae dolore. Mollitia impedit tempora, sunt sed iusto quisquam quis natus libero sit veniam necessitatibus voluptatem nam reiciendis earum dicta aliquid quod, maiores recusandae quaerat aspernatur assumenda, ipsa voluptatibus. Inventore ipsa nam autem id, quia doloribus, recusandae eius atque optio consectetur quibusdam. Id dolores unde eaque placeat voluptatum tempore doloribus hic corporis odit culpa. Adipisci eius repellat asperiores magni voluptatibus dicta placeat aperiam incidunt esse ratione id nemo maxime impedit alias, atque minima consequatur molestias, nam consectetur delectus est repudiandae voluptatum in! Ipsam doloribus consectetur alias repellendus officiis dolor unde voluptatum aut, necessitatibus error! Perferendis laborum quaerat expedita iste, aperiam id sit ullam? Repudiandae ex eum accusantium.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum atque numquam in itaque, magnam ut voluptatem sit quo aperiam soluta laboriosam cumque quae error, doloremque obcaecati ad nobis fuga impedit? Magni quaerat odit eligendi ex sit delectus nemo tenetur? Provident veniam maiores, odit inventore ab beatae rerum assumenda impedit amet quam aliquid doloribus vel, laudantium doloremque iusto sapiente ipsa hic at corporis ad dolorem. Molestiae voluptatem temporibus provident enim, atque deleniti corporis eaque sapiente rem dolores aperiam velit eos facere perspiciatis? Perferendis, labore neque. Quasi laboriosam officiis dolore molestias qui, necessitatibus rerum in sint consequuntur dolorum nostrum placeat quibusdam aliquid adipisci. Doloribus, veniam! Culpa quis perferendis quidem sint nemo ratione. Consequatur magni consectetur quasi atque voluptas quibusdam non explicabo minima facere eius odio, quod incidunt labore earum nihil ex vel? Voluptas repellendus quisquam quis odio, excepturi debitis. Fugiat voluptatibus nisi neque molestias expedita, adipisci ipsam? Illum, exercitationem quam. Quos provident beatae quasi numquam, voluptate ex laudantium dolorum minima nulla sunt rem ab vero sequi hic quae dolores modi! Sint autem ipsa illo aliquam numquam deleniti vero quos! Tempora non nesciunt, vel architecto itaque dolores odit inventore laudantium explicabo similique alias ipsum. Fugit officiis qui iste dignissimos error ratione alias ea! Quibusdam tempore reiciendis laudantium qui autem sequi illum minus, asperiores beatae nostrum cupiditate vel sed, aliquid natus temporibus quia modi, architecto eaque ipsum quas? Blanditiis delectus natus voluptatum cum ipsam consequuntur quisquam, molestiae error ducimus officia nemo saepe vitae omnis officiis nostrum. Maxime iste nisi enim, nostrum quo qui dicta quam eos rerum illo expedita dolorum necessitatibus recusandae voluptates. Amet quaerat laborum obcaecati cupiditate, rem nulla vitae eligendi, quibusdam odit ex rerum corporis praesentium optio repudiandae aperiam velit est illo, magnam dolore aliquam similique. Rerum ea qui debitis temporibus id, exercitationem esse nihil dolores delectus, iste nesciunt accusantium laboriosam? Quam fuga ratione molestiae molestias odit voluptatum consequuntur consectetur, impedit fugiat, ea placeat temporibus quod, excepturi ut beatae est dolores incidunt? Quod maxime blanditiis vel incidunt, modi ad molestiae odit tempora debitis accusamus commodi labore voluptatibus mollitia provident corrupti harum eius rem in atque totam voluptatem unde consequatur accusantium perspiciatis! Exercitationem, ab quia quidem deserunt natus expedita consequatur aperiam veniam! Repellat et debitis reprehenderit expedita doloremque aperiam tenetur laudantium nostrum, veritatis veniam. Molestias odio dolores, porro voluptate vitae odit tenetur, accusamus, ipsa magni officiis tempora a optio animi et laboriosam aperiam impedit sint libero beatae dolore. Mollitia impedit tempora, sunt sed iusto quisquam quis natus libero sit veniam necessitatibus voluptatem nam reiciendis earum dicta aliquid quod, maiores recusandae quaerat aspernatur assumenda, ipsa voluptatibus. Inventore ipsa nam autem id, quia doloribus, recusandae eius atque optio consectetur quibusdam. Id dolores unde eaque placeat voluptatum tempore doloribus hic corporis odit culpa. Adipisci eius repellat asperiores magni voluptatibus dicta placeat aperiam incidunt esse ratione id nemo maxime impedit alias, atque minima consequatur molestias, nam consectetur delectus est repudiandae voluptatum in! Ipsam doloribus consectetur alias repellendus officiis dolor unde voluptatum aut, necessitatibus error! Perferendis laborum quaerat expedita iste, aperiam id sit ullam? Repudiandae ex eum accusantium.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum atque numquam in itaque, magnam ut voluptatem sit quo aperiam soluta laboriosam cumque quae error, doloremque obcaecati ad nobis fuga impedit? Magni quaerat odit eligendi ex sit delectus nemo tenetur? Provident veniam maiores, odit inventore ab beatae rerum assumenda impedit amet quam aliquid doloribus vel, laudantium doloremque iusto sapiente ipsa hic at corporis ad dolorem. Molestiae voluptatem temporibus provident enim, atque deleniti corporis eaque sapiente rem dolores aperiam velit eos facere perspiciatis? Perferendis, labore neque. Quasi laboriosam officiis dolore molestias qui, necessitatibus rerum in sint consequuntur dolorum nostrum placeat quibusdam aliquid adipisci. Doloribus, veniam! Culpa quis perferendis quidem sint nemo ratione. Consequatur magni consectetur quasi atque voluptas quibusdam non explicabo minima facere eius odio, quod incidunt labore earum nihil ex vel? Voluptas repellendus quisquam quis odio, excepturi debitis. Fugiat voluptatibus nisi neque molestias expedita, adipisci ipsam? Illum, exercitationem quam. Quos provident beatae quasi numquam, voluptate ex laudantium dolorum minima nulla sunt rem ab vero sequi hic quae dolores modi! Sint autem ipsa illo aliquam numquam deleniti vero quos! Tempora non nesciunt, vel architecto itaque dolores odit inventore laudantium explicabo similique alias ipsum. Fugit officiis qui iste dignissimos error ratione alias ea! Quibusdam tempore reiciendis laudantium qui autem sequi illum minus, asperiores beatae nostrum cupiditate vel sed, aliquid natus temporibus quia modi, architecto eaque ipsum quas? Blanditiis delectus natus voluptatum cum ipsam consequuntur quisquam, molestiae error ducimus officia nemo saepe vitae omnis officiis nostrum. Maxime iste nisi enim, nostrum quo qui dicta quam eos rerum illo expedita dolorum necessitatibus recusandae voluptates. Amet quaerat laborum obcaecati cupiditate, rem nulla vitae eligendi, quibusdam odit ex rerum corporis praesentium optio repudiandae aperiam velit est illo, magnam dolore aliquam similique. Rerum ea qui debitis temporibus id, exercitationem esse nihil dolores delectus, iste nesciunt accusantium laboriosam? Quam fuga ratione molestiae molestias odit voluptatum consequuntur consectetur, impedit fugiat, ea placeat temporibus quod, excepturi ut beatae est dolores incidunt? Quod maxime blanditiis vel incidunt, modi ad molestiae odit tempora debitis accusamus commodi labore voluptatibus mollitia provident corrupti harum eius rem in atque totam voluptatem unde consequatur accusantium perspiciatis! Exercitationem, ab quia quidem deserunt natus expedita consequatur aperiam veniam! Repellat et debitis reprehenderit expedita doloremque aperiam tenetur laudantium nostrum, veritatis veniam. Molestias odio dolores, porro voluptate vitae odit tenetur, accusamus, ipsa magni officiis tempora a optio animi et laboriosam aperiam impedit sint libero beatae dolore. Mollitia impedit tempora, sunt sed iusto quisquam quis natus libero sit veniam necessitatibus voluptatem nam reiciendis earum dicta aliquid quod, maiores recusandae quaerat aspernatur assumenda, ipsa voluptatibus. Inventore ipsa nam autem id, quia doloribus, recusandae eius atque optio consectetur quibusdam. Id dolores unde eaque placeat voluptatum tempore doloribus hic corporis odit culpa. Adipisci eius repellat asperiores magni voluptatibus dicta placeat aperiam incidunt esse ratione id nemo maxime impedit alias, atque minima consequatur molestias, nam consectetur delectus est repudiandae voluptatum in! Ipsam doloribus consectetur alias repellendus officiis dolor unde voluptatum aut, necessitatibus error! Perferendis laborum quaerat expedita iste, aperiam id sit ullam? Repudiandae ex eum accusantium.</p> -->
+<div class="others mb-5" >
+    <div class="card-deck">
+
+
+        {% for i in articless  %}
+
+{% if articles.pk != i.pk  %}
+
+        <div class="card" style="background: #222734;">
+          <img class="card-img-top" src="{{ i.article_img_2.url }}" alt="Card image cap">
+          <div class="card-body">
+            <a href="/news/{{ i.pk }}">
+                <h5 class="card-title">{{ i.article_title }}</h5>
+            </a>
+            
+            <p class="card-text" style="color: floralwhite;">{{ i.article_subtitle }}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">{{ i.date }}</small>
+          </div>
+        </div>
+        
+        {% endif %}
+        {% endfor %}
+
+      </div>
+</div>
+
+<a href="{% url 'home' %}" class="btn btn-secondary m-3">Ortga qaytish</a>
+  
+</div>
+
+{% endblock content %}
