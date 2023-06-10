@@ -1,6 +1,6 @@
 # Blog-Site
  My blog site code
-
+BU ko'rinish birinchi qilgan web saytim desam ham bo'ladi
 home page 
 ![image](https://user-images.githubusercontent.com/70073648/194692053-27e4df74-bdbd-4836-b95c-a3334ebd052e.png)
 
